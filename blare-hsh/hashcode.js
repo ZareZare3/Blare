@@ -9,14 +9,10 @@ class BlareHash{
  var data;
  var identityNms;
  function BlareHash(str){
- if(isRandom){
- this.data = randInt(randInt(100000000000));
- 
- }else{
   
   for(var i = 0;i <= uname.length;i++){
-   this.data += str.charCodeAt(i) + ',';
-   
+   this.data = new Array([]);
+   this.data.push(uname.charCodeAt(i));
   
   }
   
@@ -27,8 +23,11 @@ class BlareHash{
  
 function addEncryptData(){
 this.identityNms = randInt(50);
- this.data = Math.sqrt(data) * identityNms + "-" + identityNms;
- 
+ var tempData = data;
+ this.data = new Array([]);
+ for(var i = 0;i < tempData.length;i++){
+ this.data.push((Math.sqrt(tempData[i]) * identityNms) + "-" + identityNms);
+ }
 } 
  function blobify(){
  return new Blob(this.data.toString());
@@ -37,13 +36,23 @@ this.identityNms = randInt(50);
 }
 function parseHash(hash){
 //we need to convert our string into a char array to read it
-var splitHash;
+var splitHash = new Array();
 splitHash.from(hash.toString());
+ var individualNums = new Array();
+ var currentCharNo = 0;
  //time to parse the array
  //we can just use hash's length for the for loop because they have the same length
  for(var i = 0;i < hash.toString().length;i++){
- if()
+ if(splithash[i] != "," || splithash[i] != "-"){
+ individualNums[currentCharNo] += splithash[i];
  
+ }else{
+ currentCharNo += 1;
+  
+  
+ 
+ }
+ //now its time to extract the numbers and feed them into the ASCII code-to-char converter.
  
  }
 }
