@@ -37,6 +37,13 @@ this.identityNms = randInt(50);
 }
 function parseHash(hash){
 //we need to convert our string into a char array to read it
-
-
+var splitHash;
+splitHash.from(hash.toString());
+ //time to parse the array
+ //we can just use hash's length for the for loop because they have the same length
+ for(var i = 0;i < hash.toString().length;i++){
+ if()
+ 
+ 
+ }
 }
