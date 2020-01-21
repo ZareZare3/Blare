@@ -5,6 +5,7 @@ return Math.floor(Math.random() * (max*2));
 
 }
 class BlareHash{
+ //the main variable
  var data;
  var identityNms;
  function BlareHash(str){
@@ -33,4 +34,9 @@ this.identityNms = randInt(50);
  return new Blob(this.data.toString());
  
  }
+}
+function parseHash(hash){
+//we need to convert our string into a char array to read it
+
+
 }
