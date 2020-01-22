@@ -40,16 +40,27 @@ var splitHash = new Array();
 splitHash.from(hash.toString());
  var individualNums = new Array();
  var currentCharNo = 0;
+ var idStart = false;
+ var identityHash;
  //time to parse the array
  //we can just use hash's length for the for loop because they have the same length
  for(var i = 0;i < hash.toString().length;i++){
  if(splithash[i] != "," || splithash[i] != "-"){
+  if(!idStart){
  individualNums[currentCharNo] += splithash[i];
- 
- }else{
+  }else{
+  
+  
+  
+  }
+ }else if(splithash[i] == ","){
  currentCharNo += 1;
   
   
+ 
+ }else if(splithash[i] == "-"){
+ idStart == true;
+ 
  
  }
  //now its time to extract the numbers and feed them into the ASCII code-to-char converter.
