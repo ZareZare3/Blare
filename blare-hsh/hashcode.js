@@ -41,7 +41,7 @@ splitHash.from(hash.toString());
  var individualNums = new Array();
  var currentCharNo = 0;
  var idStart = false;
- var identityHash;
+ var identityHash = "";
  //time to parse the array
  //we can just use hash's length for the for loop because they have the same length
  for(var i = 0;i < hash.toString().length;i++){
@@ -49,7 +49,7 @@ splitHash.from(hash.toString());
   if(!idStart){
  individualNums[currentCharNo] += splithash[i];
   }else{
-  
+  identityHash.push(splithash[i]);
   
   
   }
@@ -64,6 +64,11 @@ splitHash.from(hash.toString());
  
  }
  //now its time to extract the numbers and feed them into the ASCII code-to-char converter.
- 
+ var identityInt = identityHash.parseInt();
+  var finalNo;
+  for (var i = 0;i < individualNums.length; i++){
+  finalNo += ind
+  
+  }
  }
 }
